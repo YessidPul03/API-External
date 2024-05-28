@@ -1,0 +1,79 @@
+.container{
+background-color:   transparent;
+    margin: 20px auto;
+  padding: 0 10px;
+}
+.card-body {
+    min-height: auto;
+    
+}
+
+.card {
+    transition: transform 0.3s  ;
+    
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border: cadetblue;
+}
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+.card-text{
+    background-color: #2694c7;
+    cursor: pointer;
+}
+
+
+b{
+    color: white;
+}
+#card-border{
+    border: 3px solid #3069b4
+}
+
+#cards-component{
+    margin-top: 10px;
+}
+
+.album-card{
+    margin: 10px 20px;
+}
+.album-body{
+    margin-top: 20px;
+}
+.album-userId{
+    margin-bottom: 20px;
+}
+h4{
+    font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+  }
+
+p{
+    font-style: italic;
+    color: brown;
+    font-size: larger;
+  }
+h3{
+    font-size: 18px;
+          margin-top: 5px;
+}
+
+.album-text{
+    font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase; 
+  letter-spacing: 2px; 
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid #666;
+  margin-top: 10px;
+  }

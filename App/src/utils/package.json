@@ -1,0 +1,19 @@
+{
+    "name": "api_masalcance",
+    "version": "1.0.0",
+    "description": "Descripción de tu proyecto",
+    "main": "index.js",
+    "dependencies": {
+      "express": "^4.19.2",
+      "mysql2": "^3.9.7"
+    },
+    "scripts": {
+      "start": "node connDB.js"
+    },
+    "author": "Yessid Danilo Pulgarin",
+    "license": "MasAlcance",
+    "engines": {
+      "node": ">=10.0.0"
+    }
+  }
+  

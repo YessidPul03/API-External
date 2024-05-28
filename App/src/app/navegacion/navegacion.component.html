@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="favicon.ico" alt="" width="30" height="30" />
+      ExternalAPI
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <button (click)="goToHomePage()" class="btn btn-primary mx-2">
+        Ver lista de Usuarios
+      </button>
+      <button (click)="goToRequestsPage()" class="btn btn-primary mx-2">
+        Realizar Peticiones
+      </button>
+      <button (click)="goToAlbumesPage()" class="btn btn-primary mx-2">
+        Consulta Albumes
+      </button>
+    </div>
+  </div>
+</nav>

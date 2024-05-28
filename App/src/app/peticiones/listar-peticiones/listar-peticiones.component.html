@@ -1,0 +1,35 @@
+<div id="info" class="container mt-4 shadow-lg p3 mb-5 bg-body rounded">
+  <h2 class="tableusers">Lista de Peticiones Realizadas</h2>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr class="table-header">
+        <th class="table-cell">ID_PETICION</th>
+        <th class="table-cell">ID_USUARIO</th>
+        <th class="table-cell">TIPO_METODO</th>
+        <th class="table-cell">FECHA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="peticiones | async as peticiones; else noRecords">
+        <tr *ngFor="let peticion of peticiones" class="table-row">
+          <td class="table-cell">{{ peticion.id_peticion }}</td>
+          <td class="table-cell">{{ peticion.id_usuario }}</td>
+          <td class="table-cell">{{ peticion.tipo_metodo }}</td>
+          <td class="table-cell">{{ peticion.fecha }}</td>
+        </tr>
+      </ng-container>
+      <ng-template #noRecords>
+        <tr>
+          <td colspan="4">No hay registros</td>
+        </tr>
+      </ng-template>
+      <!--
+      <tr *ngFor="let peticion of peticiones | async" class="table-row">
+        <td class="table-cell">{{ peticion.id_peticion }}</td>
+        <td class="table-cell">{{ peticion.id_usuario }}</td>
+        <td class="table-cell">{{ peticion.tipo_metodo }}</td>
+        <td class="table-cell">{{ peticion.fecha }}</td>
+      </tr>
+    --></tbody>
+  </table>
+</div>

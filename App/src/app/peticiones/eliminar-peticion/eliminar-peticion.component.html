@@ -1,0 +1,22 @@
+<h2 class="view-posts">Eliminación de Posts</h2>
+
+<div class="input-container">
+  <input
+    type="number"
+    [(ngModel)]="postId"
+    placeholder="Post ID"
+    class="form-control"
+  />
+  <button class="btn btn-danger" (click)="delePost()">Eliminar</button>
+</div>
+
+<div class="post-list">
+  <div *ngFor="let post of posts" class="post-item">
+    <h4>Post N° {{ post.id }}</h4>
+    <h5>{{ post.title }}</h5>
+    <p style="font-style: italic">Usuario ID: {{ post.userId }}</p>
+    <div class="post-body">
+      <p>{{ post.body }}</p>
+    </div>
+  </div>
+</div>

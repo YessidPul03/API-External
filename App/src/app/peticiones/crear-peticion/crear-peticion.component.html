@@ -1,0 +1,67 @@
+<div class="container">
+  <h2 class="create-text">Crea un nuevo post (UserId)</h2>
+  <form (ngSubmit)="createPost()" class="create-post-form">
+    <label for="userId">Usuario ID:</label>
+    <input
+      #id
+      (change)="obtPost(id.value)"
+      type="text"
+      id="userId"
+      name="userId"
+      [(ngModel)]="userId"
+      [(ngModel)]="nuevoPost.userId"
+      required
+    />
+    <label for="title">Título:</label>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      [(ngModel)]="nuevoPost.title"
+      required
+    />
+    <label for="body">Cuerpo:</label>
+    <textarea
+      id="body"
+      name="body"
+      [(ngModel)]="nuevoPost.body"
+      required
+    ></textarea>
+    <button type="submit">Crear Post</button>
+  </form>
+  <hr />
+  <h2 class="view-posts">Posts de UserId {{ userId }}</h2>
+  <div class="post-list">
+    <div *ngFor="let post of posts" class="post-item">
+      <h4>Post N° {{ post.id }}</h4>
+      <h5>{{ post.title }}</h5>
+      <p style="font-style: italic">Usuario ID: {{ post.userId }}</p>
+      <div class="post-body">
+        <p>{{ post.body }}</p>
+      </div>
+    </div>
+  </div>
+  <!--
+  <h4>Posts del Usuario </h4>
+  <div class="post-search">
+    <input
+      #id
+      class="custom-input"
+      (change)="obtPost(id.value)"
+      type="text"
+      placeholder="Buscar Post de Usuarios (ID)"
+    />
+  </div>
+
+  <div class="post-list">
+    <div *ngFor="let post of posts" class="post-item">
+      <h2>Post N° {{ post.id }}</h2>
+      <h4>{{ post.title }}</h4>
+      <p>Usuario ID: {{ post.userId }}</p>
+      <div class="post-body">
+        <p>{{ post.body }}</p>
+      </div>
+    </div>
+  </div>
+  -->
+</div>
